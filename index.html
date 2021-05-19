@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+
+    <title>Cute calculator</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Isaac">
+    <meta name="description" content="calculator">
+    <meta name="keywords" content="html5, tecnologia">
+    <meta name="viewport" content="width=device-width">
+    <script src="engine.js"></script>
+    <style>
+
+      body{
+        color:whitesmoke;
+        text-align:center;
+        background-color: rgb(63, 44, 97);
+      }
+      input{
+        margin:10px;
+        text-align:center;
+      }
+      button{
+
+        background-color: rgb(182, 240, 237);
+        display:inline-block;
+      }
+
+      #grid{
+        margin:15px 400px;
+        padding:15px 100px;
+        border-style: solid;
+        display:grid;
+        grid-template-rows:repeat(5);
+      }
+
+    </style>
+
+  </head>
+  
+  <body>
+  
+    <h1>Cute calculator</h1>
+    <p>Para operações simples</p>
+    
+    <div id="grid">
+
+      
+        <input type="text" id="n1"placeholder="Primeiro dígito">
+        <div>
+        <button onclick="iniciarCalculo('+')">+</button>
+        <button onclick="iniciarCalculo('-')">-</button>
+        <button onclick="iniciarCalculo('x')">x</button>
+        <button onclick="iniciarCalculo('/')">/</button>
+        </div>
+        <input type="text" id="n2" placeholder="Segundo dígito">
+        <p> = </p>
+        <input type="text" id="output" placeholder="Resultado" readonly>
+
+    </div>
+
+    <script>
+      var $n1 = document.querySelector("#n1");
+      var $n2 = document.querySelector("#n2");
+      var $output = document.querySelector("#output");
+
+        
+      $n1.value="";
+      $n2.value="";
+      $output.value="";
+      $n1.focus();
+    </script>
+
+
+  </body>
+
+  
+</html>
